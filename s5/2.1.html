@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Examples</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- ReactとReactDOM（両方とも開発版） -->
+    <script src="https://unpkg.com/react@16.8.6/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.8.6/umd/react-dom.development.js"></script>
+    <!-- Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+      //  ここにJSXを記述する
+      function Cat({ name }) {
+        return (
+          <>
+            <h1>The cat's name is {name}</h1>
+            <p>He's good.</p>
+          </>
+        );
+      }
+
+      ReactDOM.render(<Cat name="Jungle" />, document.getElementById("root"));
+    </script>
+  </body>
+</html>
